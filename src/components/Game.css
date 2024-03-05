@@ -19,6 +19,12 @@
     border: 10px solid #ecfa00;
     display: flex;
 }
+.wordContainerGameOver{
+    margin: 1.5em;
+    padding: 5px;
+    border: 10px solid #fa0000;
+    display: flex;
+}
 .letter, .blankSquare{
     font-size: 70px;
     line-height: 1.5;
@@ -54,17 +60,30 @@
         font-size: 1.7em;
     }
     .wordContainer{
-        margin: 1.5em;
-        padding: 2.5px;
-        border: 5px solid #ecfa00;
+        margin: 1.5em 0 1.5em 0;
+        padding: 0;
+        border: 3px solid #ecfa00;
+        max-width: 600px;
+    }
+    .wordContainerGameOver{
+        margin: 1.5em 0 1.5em 0;
+        padding: 0;
+        border: 3px solid #fa0000;
         max-width: 600px;
     }
     .letter, .blankSquare{
-        font-size: 20px;
+        font-size: 18px;
         line-height: 2em;
-        height: 40px;
-        width: 40px;
+        height: 28px;
+        width: 28px;
         border: 1px solid #000;
+    }
+    .letterContainer input{
+        height: 30px;
+        width: 30px;
+        font-size: 20px;
+        text-align: center;
+        margin-right: 1em;
     }
 }
 @media only screen and (min-width: 772px) and (max-width: 992px) { 
@@ -78,6 +97,11 @@
         margin: 1.5em;
         padding: 2.5px;
         border: 6px solid #ecfa00;
+    }
+    .wordContainerGameOver{
+        margin: 1.5em;
+        padding: 2.5px;
+        border: 6px solid #fa0000;
     }
     .letter, .blankSquare{
         font-size: 30px;

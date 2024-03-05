@@ -38,7 +38,7 @@ function App() {
     return {word, category}
   }, [words])
 
-  const pitoca = ()=>{
+  const onlyStart = ()=>{
     setGameStage(stages[1].name)
         // clear all letters
     clearLettersStates()
@@ -100,10 +100,14 @@ function App() {
       //reset  all states
       clearLettersStates()
 
-      setGameStage(stages[2].name)
+      setGuessedLetters(pickedWord.toLowerCase().split(""))
+
+      setTimeout (function(){
+        setGameStage(stages[2].name)
+    }, 500)
     }
 
-  },[guesses])
+  },[guesses, pickedWord])
 
   // check win condition
   useEffect(()=>{
@@ -125,7 +129,7 @@ function App() {
 
   return (
     <div className="App">
-      {gameStage === 'start' && <StartScreen startGame={startGame} pitoca={pitoca} />}
+      {gameStage === 'start' && <StartScreen startGame={startGame} onlyStart={onlyStart} />}
       {gameStage === 'game' && 
         <Game 
           verifyLetter={verifyLetter}  

@@ -1,10 +1,10 @@
 import "./StartScreen.css"
 
-const StartScreen = ({startGame, pitoca}) => {
+const StartScreen = ({startGame, onlyStart}) => {
 
   const handleStartGame = () =>{
     startGame()
-    pitoca()
+    onlyStart()
   }
   
   return (

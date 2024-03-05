@@ -5,7 +5,6 @@ const Game = ({verifyLetter, pickedWord, pickedCategory, letters, guessedLetters
   
     const [ letter, setLetters] = useState("")
     const letterInputRef= useRef(null)
-
     const handleSubmit = (e) =>{
         e.preventDefault()
         
@@ -16,6 +15,7 @@ const Game = ({verifyLetter, pickedWord, pickedCategory, letters, guessedLetters
         letterInputRef.current.focus()
     }
     
+    const wordContainerClass = guesses === 0 ? "wordContainerGameOver" : "wordContainer"
     return (
     <div className="game">
         <p className="points">
@@ -26,7 +26,7 @@ const Game = ({verifyLetter, pickedWord, pickedCategory, letters, guessedLetters
             Dica sobre a palavra: <span>{pickedCategory}</span>
         </h3>
         <p>voce ainda tem {guesses} tentativa(s)</p>
-        <div className="wordContainer">
+        <div className={wordContainerClass}>
             {letters.map((letter, i)=>(
                 guessedLetters.includes(letter) ? (
                     <span key={i} className="letter"> {letter} </span>

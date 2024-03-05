@@ -5,6 +5,6 @@ export const wordsList = {
     computador: ["Mouse", "Teclado", "Monitor", "Gabinete"],
     programação: ["Linguagem", "Framework", "JavaScript", "React"],
     alimento: ["Arroz", "Feijão", "Carne", "Leite", "Ovo"],
-    roupa: ["calça", "shorts", "camisa", "camiseta", "bermuda"],
+    roupa: ["Calça", "Shorts", "Camisa", "Camiseta", "Bermuda"],
   };
   
